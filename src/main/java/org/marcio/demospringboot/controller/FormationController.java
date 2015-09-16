@@ -26,12 +26,12 @@ public class FormationController {
         this.formationRepository = formationRepository;
     }
 
-    @RequestMapping("/")
+    @RequestMapping("/formation")
     public String home() {
         return "index";
     }
 
-    @RequestMapping(method = RequestMethod.GET, value = "/list")
+    @RequestMapping(method = RequestMethod.GET, value = "/formation/list")
     public String list(Map<String, Object> map) {
 
         map.put("listTheme", formationRepository.findAll());
@@ -39,7 +39,7 @@ public class FormationController {
         return "list";
     }
 
-    @RequestMapping("/new")
+    @RequestMapping("/formation/new")
     public String form(ModelMap map) {
 
         Formation formation = new Formation();
@@ -50,24 +50,28 @@ public class FormationController {
         return "createForm";
     }
 
-    @RequestMapping(value = "/new.do", method = RequestMethod.POST)
-    public String addNewPost(@Valid Formation formation) {
-
-        formationRepository.save(new Formation(formation.getTheme(), formation.getDescription()));
-
+    @RequestMapping(value = "formation/new.do", method = RequestMethod.POST)
+    public String saveProduct(Formation formation){
+        formationRepository.save(formation);
         return "redirect:list";
     }
 
-    @RequestMapping("formation/{id}")
-    public String showProduct(@PathVariable Long id, Model model){
+   @RequestMapping("formation/show/{id}")
+    public String show(@PathVariable Long id, Model model){
         model.addAttribute("showTheme", formationRepository.findOne(id));
         return "showForm";
     }
-/*
+
     @RequestMapping("formation/edit/{id}")
-    public String edit(@PathVariable Integer id, Model model){
-        model.addAttribute("product", productService.getProductById(id));
-        return "form";
+    public String edit(@PathVariable Long id, Model model){
+        model.addAttribute("formation", formationRepository.findOne(id));
+        return "createForm";
     }
-    */
+
+    @RequestMapping("formation/{id}")
+    public String delete(@PathVariable Long id){
+        formationRepository.delete(id);
+        return "redirect:list";
+    }
+
 }

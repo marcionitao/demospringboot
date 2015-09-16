@@ -22,12 +22,16 @@
 
 <br/>
 
-<form class="form-horizontal"  th:action="@{/formation/new.do}" th:object="${formation}" method="post">
+<form class="form-horizontal">
     <fieldset style="width:95%;">
-        <legend style="padding-left: 15px;">Theme</legend>
+        <legend style="padding-left: 15px;">Update Theme</legend>
 
-        <!--Fundamental para UPDATE, irá garantir que os dados deste "id" sejam alterados com sucesso  -->
-        <input type="hidden"  th:field="*{id}"/>
+        <div class="form-group">
+            <label class="col-md-2 control-label">Id Theme</label>
+            <div class="col-xs-6">
+                <input class="form-control" disabled="true" type="text" th:field="*{id}"/>
+            </div>
+        </div>
 
         <div class="form-group">
             <label class="col-md-2 control-label">Theme</label>

@@ -35,9 +35,9 @@
             </div>
             <div id="navbar" class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li id="menu-home" ><a href="/" th:href="@{/}">Home</a></li>
-                    <li  id="menu-new" ><a href="/new" th:href="@{/new}">New Formation</a></li>
-                    <li id="menu-list" ><a href="/list" th:href="@{/list}">List Formation</a></li>
+                    <li id="menu-home" ><a href="/formation" th:href="@{/formation}">Home</a></li>
+                    <li  id="menu-new" ><a href="/formation/new" th:href="@{/formation/new}">New Formation</a></li>
+                    <li id="menu-list" ><a href="/formation/list" th:href="@{/formation/list}">List Formation</a></li>
                 </ul>
             </div><!--/.nav-collapse -->
         </div><!--/.container-fluid -->
@@ -46,11 +46,11 @@
 <script type="text/javascript">
     $(document).ready(function() {
         $(".menu-button").removeClass("active");
-        if(document.location.pathname === "/") {
+        if(document.location.pathname === "/formation") {
             $("#menu-home").addClass("active");
-        } else if(document.location.pathname === "/new") {
+        } else if(document.location.pathname === "/formation/new") {
             $("#menu-new").addClass("active");
-        } else if(document.location.pathname === "/list") {
+        } else if(document.location.pathname === "/formation/list") {
             $("#menu-list").addClass("active");
         }
     });
