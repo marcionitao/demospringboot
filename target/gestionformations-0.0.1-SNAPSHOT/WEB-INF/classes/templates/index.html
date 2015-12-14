@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <title>Formations</title>
+
+    <link href="http://cdn.jsdelivr.net/webjars/bootstrap/3.3.4/css/bootstrap.min.css"
+          th:href="@{/webjars/bootstrap/3.3.4/css/bootstrap.min.css}"
+          rel="stylesheet" media="screen"/>
+
+    <script src="http://cdn.jsdelivr.net/webjars/jquery/2.1.4/jquery.min.js"
+            th:src="@{/webjars/jquery/2.1.4/jquery.min.js}"></script>
+
+    <link href="styles.css"
+          th:href="@{styles.css}" rel="stylesheet" media="screen"/>
+
+</head>
+</head>
+<body>
+
+<!--chama e executa a barra de menus -->
+<div id="espaco" th:include="common/menu"/>
+
+<br/>
+
+<div class="jumbotron">
+<p>HOME</p>
+    </div>
+</body>
+</html>

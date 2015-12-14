@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Formations</title>
+
+    <link href="http://cdn.jsdelivr.net/webjars/bootstrap/3.3.4/css/bootstrap.min.css"
+          th:href="@{/webjars/bootstrap/3.3.4/css/bootstrap.min.css}"
+          rel="stylesheet" media="screen" />
+
+    <script src="http://cdn.jsdelivr.net/webjars/jquery/2.1.4/jquery.min.js"
+            th:src="@{/webjars/jquery/2.1.4/jquery.min.js}"></script>
+
+    <link href="styles.css"
+          th:href="@{styles.css}" rel="stylesheet" media="screen"/>
+
+</head>
+<body>
+<!--chama e executa a barra de menus -->
+<div id="espaco" th:include="common/menu"/>
+
+<br/>
+<div class="container" style="
+    margin-left: 30px;
+    margin-right: auto;">
+    <table class="table">
+        <tr>
+            <th> ID </th>
+            <th> Theme Id</th>
+            <th> Theme</th>
+            <th> Description</th>
+            <th> Edit </th>
+            <th> Delete </th>
+        </tr>
+        <tbody>
+        <tr th:each="theme : ${listTheme}">
+            <td th:text="${theme.id}"><a href="/formation/${theme.id}">Id</a></td>
+            <td th:text="${theme.id}"/>
+            <td th:text="${theme.theme}"/>
+            <td th:text="${theme.description}"/>
+            <td><a th:href="${'/formation/edit/' + theme.id}">Edit</a></td>
+            <td><a th:href="${'/formation/' + theme.id}">Delete</a></td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+</body>
+</html>

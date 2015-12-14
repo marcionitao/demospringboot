@@ -1,0 +1,57 @@
+<!--
+<ul class="nav nav-pills pull-left">
+    <li id="menu-home" role="presentation" class="menu-button"><a href="/" th:href="@{/}">Home</a></li>
+    <li id="menu-new" role="presentation" class="menu-button"><a href="/new" th:href="@{/new}">Criar Thema</a></li>
+    <li id="menu-list" role="presentation" class="menu-button"><a href="/list" th:href="@{/list}">Listar Themas</a></li>
+</ul>
+-->
+
+<style id="style-1-cropbar-clipper">
+.en-markup-crop-options {
+    top: 18px !important;
+    /*left: 50% !important;*/
+    margin-left: -100px !important;
+    width: 200px !important;
+    border: 2px rgba(255,255,255,.38) solid !important;
+    border-radius: 4px !important;
+}
+
+.en-markup-crop-options div div:first-of-type {
+    margin-left: 0px !important;
+}
+</style>
+
+    <!-- Static navbar -->
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">Project Formation</a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li id="menu-home" ><a href="/formation" th:href="@{/formation}">Home</a></li>
+                    <li  id="menu-new" ><a href="/formation/new" th:href="@{/formation/new}">New Formation</a></li>
+                    <li id="menu-list" ><a href="/formation/list" th:href="@{/formation/list}">List Formation</a></li>
+                </ul>
+            </div><!--/.nav-collapse -->
+        </div><!--/.container-fluid -->
+    </nav>
+
+<script type="text/javascript">
+    $(document).ready(function() {
+        $(".menu-button").removeClass("active");
+        if(document.location.pathname === "/formation") {
+            $("#menu-home").addClass("active");
+        } else if(document.location.pathname === "/formation/new") {
+            $("#menu-new").addClass("active");
+        } else if(document.location.pathname === "/formation/list") {
+            $("#menu-list").addClass("active");
+        }
+    });
+</script>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <title>Formations</title>
+
+    <link href="http://cdn.jsdelivr.net/webjars/bootstrap/3.3.4/css/bootstrap.min.css"
+          th:href="@{/webjars/bootstrap/3.3.4/css/bootstrap.min.css}"
+          rel="stylesheet" media="screen"/>
+
+    <script src="http://cdn.jsdelivr.net/webjars/jquery/2.1.4/jquery.min.js"
+            th:src="@{/webjars/jquery/2.1.4/jquery.min.js}"></script>
+
+    <link href="styles.css"
+          th:href="@{styles.css}" rel="stylesheet" media="screen"/>
+
+</head>
+<body>
+
+<!--chama e executa a barra de menus -->
+<div id="espaco" th:include="common/menu"/>
+
+<br/>
+
+<form class="form-horizontal">
+    <fieldset style="width:95%;">
+        <legend style="padding-left: 15px;">Details Data</legend>
+
+        <div class="form-group">
+            <label class="col-md-2 control-label">Theme Id</label>
+            <div class="col-xs-6">
+                <p class="form-control-static" th:text="${showTheme.id}">Theme Id</p>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="col-md-2 control-label">Theme</label>
+            <div class="col-xs-6">
+                <p class="form-control-static" th:text="${showTheme.theme}">Theme</p>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="col-md-2 control-label">Description</label>
+            <div class="col-xs-10">
+                <textarea class="form-control" rows="5" type="text" th:text="${showTheme.description}"/>
+            </div>
+        </div>
+
+    </fieldset>
+</form>
+
+</body>
+</html>
