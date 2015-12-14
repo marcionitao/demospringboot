@@ -23,6 +23,18 @@
         <relativePath />
     </parent>
 
+    <!-- SCM and CONTINUOUS INTEGRATION URLS -->
+    <scm>
+        <url>https://github.com/marcionitao/demospringboot.git/</url>
+        <connection>SSL</connection>
+        <developerConnection>scm:git:https://github.com/marcionitao/demospringboot.git</developerConnection>
+        <tag>HEAD</tag>
+    </scm>
+    <ciManagement>
+        <url>https://travis-ci.org/marcionitao/demospringboot</url>
+        <system>Travis</system>
+    </ciManagement>
+
     <dependencies>
         <dependency>
             <groupId>javax</groupId>
