@@ -1,5 +1,8 @@
 package org.marcio.demospringboot.controller;
 
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
 import org.marcio.demospringboot.dao.FormationRepository;
 import org.marcio.demospringboot.model.Formation;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -72,6 +75,21 @@ public class FormationController {
     public String delete(@PathVariable Long id){
         formationRepository.delete(id);
         return "redirect:list";
+    }
+
+    @RequestMapping(value = "formation/api/form", method = RequestMethod.GET)
+    public
+    @ResponseBody
+    String listFormationJson(ModelMap model) throws JSONException {
+        JSONArray formationArray = new JSONArray();
+        for (Formation formation : formationRepository.findAll()) {
+            JSONObject formationJSON = new JSONObject();
+            formationJSON.put("id", formation.getId());
+            formationJSON.put("theme", formation.getTheme());
+            formationJSON.put("description", formation.getDescription());
+            formationArray.put(formationJSON);
+        }
+        return formationArray.toString();
     }
 
 }

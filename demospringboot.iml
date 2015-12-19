@@ -87,6 +87,7 @@
     <orderEntry type="library" name="Maven: org.javassist:javassist:3.18.1-GA" level="project" />
     <orderEntry type="library" name="Maven: mysql:mysql-connector-java:5.1.35" level="project" />
     <orderEntry type="library" scope="RUNTIME" name="Maven: org.hsqldb:hsqldb:2.3.3" level="project" />
+    <orderEntry type="library" name="Maven: org.json:json:20141113" level="project" />
     <orderEntry type="library" name="Maven: org.webjars:bootstrap:3.3.4" level="project" />
     <orderEntry type="library" name="Maven: org.webjars:jquery:2.1.4" level="project" />
   </component>

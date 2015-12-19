@@ -69,6 +69,7 @@
           <element id="library" level="project" name="Maven: org.javassist:javassist:3.18.1-GA" />
           <element id="library" level="project" name="Maven: mysql:mysql-connector-java:5.1.35" />
           <element id="library" level="project" name="Maven: org.hsqldb:hsqldb:2.3.3" />
+          <element id="library" level="project" name="Maven: org.json:json:20141113" />
           <element id="library" level="project" name="Maven: org.webjars:bootstrap:3.3.4" />
           <element id="library" level="project" name="Maven: org.webjars:jquery:2.1.4" />
         </element>
