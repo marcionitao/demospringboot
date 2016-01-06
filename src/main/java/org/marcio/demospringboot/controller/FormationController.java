@@ -1,25 +1,25 @@
 package org.marcio.demospringboot.controller;
 
+import net.glxn.qrgen.QRCode;
+import net.glxn.qrgen.vcard.VCard;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 import org.marcio.demospringboot.dao.FormationRepository;
 import org.marcio.demospringboot.model.Formation;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.*;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.ui.ModelMap;
-import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 
-import javax.validation.Valid;
-import java.util.ArrayList;
-import java.util.List;
+import java.io.ByteArrayOutputStream;
+import java.io.File;
 import java.util.Map;
 
 @Controller
 public class FormationController {
-
 
     @Autowired
     private FormationRepository formationRepository;
@@ -62,6 +62,7 @@ public class FormationController {
    @RequestMapping("formation/show/{id}")
     public String show(@PathVariable Long id, Model model){
         model.addAttribute("showTheme", formationRepository.findOne(id));
+       System.out.println("Objecto Long: " + formationRepository.findOne(id).getTheme());
         return "showForm";
     }
 
@@ -90,6 +91,23 @@ public class FormationController {
             formationArray.put(formationJSON);
         }
         return formationArray.toString();
+    }
+
+    @RequestMapping (value="/formation/qr/{id}", method = RequestMethod.GET)
+    public HttpEntity<byte[]> qr(@PathVariable Long id) {
+
+        String toEncode = "nº Theme: "+formationRepository.findOne(id).getId()+
+                          "\nTheme: "+formationRepository.findOne(id).getTheme()+
+                          "\nDescription: "+formationRepository.findOne(id).getDescription();
+
+        byte[] bytes =  QRCode.from(toEncode).withSize(150, 150).stream().toByteArray();
+
+        final HttpHeaders headers = new HttpHeaders();
+        headers.setContentType(MediaType.IMAGE_PNG);
+        headers.setContentLength(bytes.length);
+
+        return new ResponseEntity<byte[]> (bytes, headers, HttpStatus.CREATED);
+
     }
 
 }

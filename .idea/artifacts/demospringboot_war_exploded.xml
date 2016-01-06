@@ -72,6 +72,9 @@
           <element id="library" level="project" name="Maven: org.json:json:20141113" />
           <element id="library" level="project" name="Maven: org.webjars:bootstrap:3.3.4" />
           <element id="library" level="project" name="Maven: org.webjars:jquery:2.1.4" />
+          <element id="library" level="project" name="Maven: net.glxn:qrgen:1.4" />
+          <element id="library" level="project" name="Maven: com.google.zxing:core:2.0" />
+          <element id="library" level="project" name="Maven: com.google.zxing:javase:2.0" />
         </element>
       </element>
       <element id="directory" name="META-INF">
