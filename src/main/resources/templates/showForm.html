@@ -11,8 +11,8 @@
     <script src="http://cdn.jsdelivr.net/webjars/jquery/2.1.4/jquery.min.js"
             th:src="@{/webjars/jquery/2.1.4/jquery.min.js}"></script>
 
-    <link href="styles.css"
-          th:href="@{styles.css}" rel="stylesheet" media="screen"/>
+    <link rel="stylesheet" type="text/css" media="all"
+          href="../styles.css" th:href="@{/styles.css}" />
 
 </head>
 <body>
@@ -44,6 +44,12 @@
             <label class="col-md-2 control-label">Description</label>
             <div class="col-xs-10">
                 <textarea class="form-control" rows="5" type="text" th:text="${showTheme.description}"/>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-xs-12">
+                <img th:src="@{'/formation/qr/'+ ${id}}" />
             </div>
         </div>
 

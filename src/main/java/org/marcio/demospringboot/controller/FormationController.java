@@ -1,6 +1,7 @@
 package org.marcio.demospringboot.controller;
 
 import net.glxn.qrgen.QRCode;
+import net.glxn.qrgen.image.ImageType;
 import net.glxn.qrgen.vcard.VCard;
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -56,14 +57,22 @@ public class FormationController {
     @RequestMapping(value = "formation/new.do", method = RequestMethod.POST)
     public String saveProduct(Formation formation){
         formationRepository.save(formation);
+
+        Long numero = formation.getId().longValue();
+        System.out.print("O valor do ultimo id é: " + numero + " ");
         return "redirect:list";
     }
 
    @RequestMapping("formation/show/{id}")
     public String show(@PathVariable Long id, Model model){
         model.addAttribute("showTheme", formationRepository.findOne(id));
-       System.out.println("Objecto Long: " + formationRepository.findOne(id).getTheme());
-        return "showForm";
+       return "showForm";
+       
+      /* if (formationRepository.findOne(id) != null)
+           return "showForm";
+       else
+           return "erro";
+       */
     }
 
     @RequestMapping("formation/edit/{id}")
