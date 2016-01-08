@@ -43,13 +43,15 @@
         <div class="form-group">
             <label class="col-md-2 control-label">Description</label>
             <div class="col-xs-10">
-                <textarea class="form-control" rows="5" type="text" th:text="${showTheme.description}"/>
+                <p class="form-control-static" th:text="${showTheme.description}"/>
             </div>
         </div>
 
         <div class="form-group">
-            <div class="col-xs-12">
-                <img th:src="@{'/formation/qr/'+ ${id}}" />
+            <div class="row-fluid">
+                <div class="thumbnails">
+                    <img th:src="@{'/formation/qr/'+ ${id}}" style="margin-left: 120px;"/>
+                </div>
             </div>
         </div>
 

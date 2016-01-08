@@ -20,16 +20,15 @@
 <div id="espaco" th:include="common/menu"/>
 
 <br/>
-<div class="container" style="
-    margin-left: 30px;
-    margin-right: auto;">
-    <table class="table">
+<div class="container" align="center">
+    <table class="table table-striped" >
         <tr>
             <th> ID </th>
             <th> Theme Id</th>
             <th> Theme</th>
             <th> Description</th>
             <th> Edit </th>
+            <th> Show </th>
             <th> Delete </th>
         </tr>
         <tbody>
@@ -39,6 +38,7 @@
             <td th:text="${theme.theme}"/>
             <td th:text="${theme.description}"/>
             <td><a th:href="${'/formation/edit/' + theme.id}">Edit</a></td>
+            <td><a th:href="${'/formation/show/' + theme.id}">Show</a></td>
             <td><a th:href="${'/formation/' + theme.id}">Delete</a></td>
         </tr>
         </tbody>

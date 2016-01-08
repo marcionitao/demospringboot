@@ -67,7 +67,7 @@ public class FormationController {
     public String show(@PathVariable Long id, Model model){
         model.addAttribute("showTheme", formationRepository.findOne(id));
        return "showForm";
-       
+
       /* if (formationRepository.findOne(id) != null)
            return "showForm";
        else
