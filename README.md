@@ -10,3 +10,4 @@ App CRUD with technologies:
 + MySQL
 + Hibernate
 + Thymeleaf
++ QR code

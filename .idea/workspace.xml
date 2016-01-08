@@ -7,26 +7,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4060437c-cc68-48b3-a23a-f511c52f7938" name="Default" comment="">
-      <change type="DELETED" beforePath="C:\Users\Márcio\IdeaProjects\demospringboot\src\main\resources\static\image\colorwheel-icon.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Márcio\IdeaProjects\demospringboot\target\classes\static\image\colorwheel-icon.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Márcio\IdeaProjects\demospringboot\target\gestionformations-0.0.1-SNAPSHOT\WEB-INF\classes\static\image\colorwheel-icon.png" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/marcio/demospringboot/controller/FormationController.class" afterPath="$PROJECT_DIR$/target/classes/org/marcio/demospringboot/controller/FormationController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/gestionformations-0.0.1-SNAPSHOT/WEB-INF/classes/org/marcio/demospringboot/controller/FormationController.class" afterPath="$PROJECT_DIR$/target/gestionformations-0.0.1-SNAPSHOT/WEB-INF/classes/org/marcio/demospringboot/controller/FormationController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/gestionformations-0.0.1-SNAPSHOT.war" afterPath="$PROJECT_DIR$/target/gestionformations-0.0.1-SNAPSHOT.war" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/marcio/demospringboot/controller/FormationController.java" afterPath="$PROJECT_DIR$/src/main/java/org/marcio/demospringboot/controller/FormationController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/templates/index.html" afterPath="$PROJECT_DIR$/src/main/resources/templates/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/templates/index.html" afterPath="$PROJECT_DIR$/target/classes/templates/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/gestionformations-0.0.1-SNAPSHOT/WEB-INF/classes/templates/index.html" afterPath="$PROJECT_DIR$/target/gestionformations-0.0.1-SNAPSHOT/WEB-INF/classes/templates/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/templates/list.html" afterPath="$PROJECT_DIR$/src/main/resources/templates/list.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/templates/list.html" afterPath="$PROJECT_DIR$/target/classes/templates/list.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/gestionformations-0.0.1-SNAPSHOT/WEB-INF/classes/templates/list.html" afterPath="$PROJECT_DIR$/target/gestionformations-0.0.1-SNAPSHOT/WEB-INF/classes/templates/list.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/templates/common/menu.html" afterPath="$PROJECT_DIR$/src/main/resources/templates/common/menu.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/templates/common/menu.html" afterPath="$PROJECT_DIR$/target/classes/templates/common/menu.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/gestionformations-0.0.1-SNAPSHOT/WEB-INF/classes/templates/common/menu.html" afterPath="$PROJECT_DIR$/target/gestionformations-0.0.1-SNAPSHOT/WEB-INF/classes/templates/common/menu.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/templates/showForm.html" afterPath="$PROJECT_DIR$/src/main/resources/templates/showForm.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/templates/showForm.html" afterPath="$PROJECT_DIR$/target/classes/templates/showForm.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/gestionformations-0.0.1-SNAPSHOT/WEB-INF/classes/templates/showForm.html" afterPath="$PROJECT_DIR$/target/gestionformations-0.0.1-SNAPSHOT/WEB-INF/classes/templates/showForm.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
     </list>
     <ignored path="demospringboot.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -157,11 +138,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="list.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="list.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/templates/list.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.055555556">
+            <state vertical-scroll-proportion="-1.1923077">
               <caret line="22" column="36" selection-start-line="22" selection-start-column="36" selection-end-line="22" selection-end-column="36" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.36624774">
+              <caret line="12" column="9" selection-start-line="12" selection-start-column="9" selection-end-line="12" selection-end-column="9" />
               <folding />
             </state>
           </provider>
@@ -215,7 +206,6 @@
         <option value="$PROJECT_DIR$/src/main/resources/static/styles.css" />
         <option value="$PROJECT_DIR$/LICENCE" />
         <option value="$PROJECT_DIR$/licence.txt" />
-        <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/src/main/java/org/marcio/demospringboot/ImageAction.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/qr.html" />
@@ -228,6 +218,7 @@
         <option value="$PROJECT_DIR$/src/main/resources/templates/showForm.html" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/index.html" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/list.html" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
@@ -976,7 +967,7 @@
       <workItem from="1451984247617" duration="20129000" />
       <workItem from="1452093280742" duration="13174000" />
       <workItem from="1452180866384" duration="15356000" />
-      <workItem from="1452265908003" duration="7691000" />
+      <workItem from="1452265908003" duration="7967000" />
     </task>
     <task id="LOCAL-00001" summary="first commit.">
       <created>1442411986639</created>
@@ -994,11 +985,11 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="160110000" />
+    <option name="totallyTimeSpent" value="160386000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
-    <editor active="false" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -1013,7 +1004,7 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.43464053" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.28214827" sideWeight="0.4902507" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.28214827" sideWeight="0.4902507" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24734446" sideWeight="0.5097493" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32928678" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
@@ -1311,13 +1302,6 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.091561936">
-          <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/org/marcio/demospringboot/model/Formation.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.2140411">
@@ -1438,8 +1422,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/templates/list.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.055555556">
+        <state vertical-scroll-proportion="-1.1923077">
           <caret line="22" column="36" selection-start-line="22" selection-start-column="36" selection-end-line="22" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.36624774">
+          <caret line="12" column="9" selection-start-line="12" selection-start-column="9" selection-end-line="12" selection-end-column="9" />
           <folding />
         </state>
       </provider>
