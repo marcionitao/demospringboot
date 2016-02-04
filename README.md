@@ -2,10 +2,11 @@
 
 # demospringboot
 
-App CRUD with technologies:
+Simple java web application to demonstrate the use of technologies:
 
 + Spring Boot
 + TomCat
 + MySQL
 + Hibernate
 + Thymeleaf
++ QRCode
