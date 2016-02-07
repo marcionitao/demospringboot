@@ -1,8 +1,6 @@
 package org.marcio.demospringboot.controller;
 
 import net.glxn.qrgen.QRCode;
-import net.glxn.qrgen.image.ImageType;
-import net.glxn.qrgen.vcard.VCard;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -14,10 +12,6 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.*;
-
-import java.io.ByteArrayOutputStream;
-import java.io.File;
-import java.util.Map;
 
 @Controller
 public class FormationController {
@@ -36,9 +30,16 @@ public class FormationController {
     }
 
     @RequestMapping(method = RequestMethod.GET, value = "/formation/list")
-    public String list(Map<String, Object> map) {
+    public String list(ModelMap search,String searchString) {
 
-        map.put("listTheme", formationRepository.findAll());
+        search.addAttribute("listTheme", formationRepository.findAll());
+
+        //Condition for search box
+        if(searchString == null || searchString.equals("")){
+            search.addAttribute("listTheme", formationRepository.findAll());
+        }else{
+            search.addAttribute("listTheme", formationRepository.findByTheme(searchString));
+        }
 
         return "list";
     }
@@ -56,10 +57,9 @@ public class FormationController {
 
     @RequestMapping(value = "formation/new.do", method = RequestMethod.POST)
     public String saveProduct(Formation formation){
+
         formationRepository.save(formation);
 
-        Long numero = formation.getId().longValue();
-        System.out.print("O valor do ultimo id é: " + numero + " ");
         return "redirect:list";
     }
 
@@ -90,7 +90,7 @@ public class FormationController {
     @RequestMapping(value = "formation/api/form", method = RequestMethod.GET)
     public
     @ResponseBody
-    String listFormationJson(ModelMap model) throws JSONException {
+    String listFormationJson() throws JSONException {
         JSONArray formationArray = new JSONArray();
         for (Formation formation : formationRepository.findAll()) {
             JSONObject formationJSON = new JSONObject();
@@ -115,7 +115,7 @@ public class FormationController {
         headers.setContentType(MediaType.IMAGE_PNG);
         headers.setContentLength(bytes.length);
 
-        return new ResponseEntity<byte[]> (bytes, headers, HttpStatus.CREATED);
+        return new ResponseEntity<> (bytes, headers, HttpStatus.CREATED);
 
     }
 

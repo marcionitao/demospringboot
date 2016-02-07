@@ -21,28 +21,55 @@
 
 <br/>
 <div class="container" align="center">
-    <table class="table table-striped" >
-        <tr>
-            <th> ID </th>
-            <th> Theme Id</th>
-            <th> Theme</th>
-            <th> Description</th>
-            <th> Edit </th>
-            <th> Show </th>
-            <th> Delete </th>
-        </tr>
-        <tbody>
-        <tr th:each="theme : ${listTheme}">
-            <td th:text="${theme.id}"><a href="/formation/${theme.id}">Id</a></td>
-            <td th:text="${theme.id}"/>
-            <td th:text="${theme.theme}"/>
-            <td th:text="${theme.description}"/>
-            <td><a th:href="${'/formation/edit/' + theme.id}">Edit</a></td>
-            <td><a th:href="${'/formation/show/' + theme.id}">Show</a></td>
-            <td><a th:href="${'/formation/' + theme.id}">Delete</a></td>
-        </tr>
-        </tbody>
-    </table>
+
+    <form class="form-horizontal" method="get" th:action="@{/formation/list}">
+<!--
+        <label class="col-md-2 control-label">Theme :</label>
+        <div class="col-md-2 columns">
+            <input type="text" id ="txt" name="searchString" />
+        </div>
+
+        <div class="col-md-2 columns end">
+            <button id="button-id" type="submit">Search</button>
+        </div>
+-->
+        <div class="col-lg-4" style="padding-left: 0px;">
+
+            <div class="input-group">
+                <input type="text" class="form-control" name="searchString" placeholder="Search for Theme..."/>
+                  <span class="input-group-btn">
+                    <button class="btn btn-default" type="submit">Go!</button>
+                  </span>
+            </div>
+
+        </div>
+
+        <br/>
+        <br/>
+
+        <table class="table table-striped" >
+            <tr>
+                <th> ID </th>
+                <th> Theme Id</th>
+                <th> Theme</th>
+                <th> Description</th>
+                <th> Edit </th>
+                <th> Show </th>
+                <th> Delete </th>
+            </tr>
+            <tbody>
+            <tr th:each="theme : ${listTheme}">
+                <td th:text="${theme.id}"><a href="/formation/${theme.id}">Id</a></td>
+                <td th:text="${theme.id}"/>
+                <td th:text="${theme.theme}"/>
+                <td th:text="${theme.description}"/>
+                <td><a th:href="${'/formation/edit/' + theme.id}">Edit</a></td>
+                <td><a th:href="${'/formation/show/' + theme.id}">Show</a></td>
+                <td><a th:href="${'/formation/' + theme.id}">Delete</a></td>
+            </tr>
+            </tbody>
+        </table>
+    </form>
 </div>
 </body>
 </html>
