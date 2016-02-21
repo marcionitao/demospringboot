@@ -13,6 +13,8 @@ import org.springframework.ui.Model;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @Controller
 public class FormationController {
 
@@ -32,13 +34,44 @@ public class FormationController {
     @RequestMapping(method = RequestMethod.GET, value = "/formation/list")
     public String list(ModelMap search,String searchString) {
 
-        search.addAttribute("listTheme", formationRepository.findAll());
+        List<Formation> formations = (List<Formation>) formationRepository.findAll();
+
+        //insert toLowerCase
+        String find = searchString;
+       // search.addAttribute("listTheme", formationRepository.findAll());
 
         //Condition for search box
-        if(searchString == null || searchString.equals("")){
+        if(find == null || find.equals("")){
             search.addAttribute("listTheme", formationRepository.findAll());
         }else{
-            search.addAttribute("listTheme", formationRepository.findByTheme(searchString));
+
+            //get ID of register
+            Long id;
+
+            //to know the number of records
+            for (Formation formation : formations) {
+
+                //System.out.println("O meu lindo tema é: " + formation.getTheme());
+
+                find.toLowerCase();
+                //if contain the word to search...
+                if (formation.getTheme().contains(find)){
+
+                    find.toLowerCase();
+                    //get ID of register
+                    id = formation.getId();
+                    //System.out.println("Afinal contem esta palavra e o ID é: "+id);
+                    search.addAttribute("listTheme",  formationRepository.findOne(id));
+
+                    continue;
+                }else{
+
+                    search.addAttribute("NotFound", "Sorry! Data not found");
+                    continue;
+                }
+
+            }
+
         }
 
         return "list";
@@ -48,18 +81,14 @@ public class FormationController {
     public String form(ModelMap map) {
 
         Formation formation = new Formation();
-
         map.addAttribute("formation", formation);
         map.addAttribute("listTheme", formationRepository.findAll());
-
         return "createForm";
     }
 
     @RequestMapping(value = "formation/new.do", method = RequestMethod.POST)
     public String saveProduct(Formation formation){
-
         formationRepository.save(formation);
-
         return "redirect:list";
     }
 
@@ -67,12 +96,6 @@ public class FormationController {
     public String show(@PathVariable Long id, Model model){
         model.addAttribute("showTheme", formationRepository.findOne(id));
        return "showForm";
-
-      /* if (formationRepository.findOne(id) != null)
-           return "showForm";
-       else
-           return "erro";
-       */
     }
 
     @RequestMapping("formation/edit/{id}")

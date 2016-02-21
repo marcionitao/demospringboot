@@ -23,17 +23,8 @@
 <div class="container" align="center">
 
     <form class="form-horizontal" method="get" th:action="@{/formation/list}">
-<!--
-        <label class="col-md-2 control-label">Theme :</label>
-        <div class="col-md-2 columns">
-            <input type="text" id ="txt" name="searchString" />
-        </div>
 
-        <div class="col-md-2 columns end">
-            <button id="button-id" type="submit">Search</button>
-        </div>
--->
-        <div class="col-lg-4" style="padding-left: 0px;">
+        <div class="col-lg-4" style="/*noinspection CssRedundantUnit*/padding-left: 0px;">
 
             <div class="input-group">
                 <input type="text" class="form-control" name="searchString" placeholder="Search for Theme..."/>
@@ -69,6 +60,9 @@
             </tr>
             </tbody>
         </table>
+        <div>
+            <p th:text="${NotFound}"></p>
+        </div>
     </form>
 </div>
 </body>

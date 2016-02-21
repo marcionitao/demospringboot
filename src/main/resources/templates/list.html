@@ -24,7 +24,7 @@
 
     <form class="form-horizontal" method="get" th:action="@{/formation/list}">
 
-        <div class="col-lg-4" style="padding-left: 0px;">
+        <div class="col-lg-4" style="/*noinspection CssRedundantUnit*/padding-left: 0px;">
 
             <div class="input-group">
                 <input type="text" class="form-control" name="searchString" placeholder="Search for Theme..."/>
@@ -60,6 +60,9 @@
             </tr>
             </tbody>
         </table>
+        <div>
+            <p th:text="${NotFound}"></p>
+        </div>
     </form>
 </div>
 </body>
